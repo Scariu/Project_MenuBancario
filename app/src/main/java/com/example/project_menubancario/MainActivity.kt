@@ -24,9 +24,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun retirarSaldo() {
-        saldo -= binding.editTextMonto.text.toString().toInt()
-        mostrarMensaje("Su saldo ha sido retirado correctamente.")
+        val monto = binding.editTextMonto.text.toString().toInt()
+        if(monto <= saldo){
+            saldo -= monto
+            mostrarMensaje("No tiene saldo suficiente.")
+        }else{
+            mostrarMensaje("Su saldo ha sido retirado correctamente.")
+        }
     }
+
 
     private fun ingresarSaldo() {
         saldo += binding.editTextMonto.text.toString().toInt()
