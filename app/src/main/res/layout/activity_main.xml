@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,23 +67,25 @@
         android:text="Listo"
         android:textSize="24sp"
         app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewEditText"
+        app:layout_constraintVertical_bias="0.55" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#FFFFFF"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewBienvenido"
-        app:layout_constraintVertical_bias="0.068">
+        app:layout_constraintTop_toBottomOf="@+id/cardViewBienvenido">
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -91,17 +93,17 @@
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:id="@+id/radioButtonVerSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Saldo"
+                android:textSize="16sp" />
+
+            <RadioButton
                 android:id="@+id/radioButtonIngresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ingresar"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radioButtonSalir"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Salir"
                 android:textSize="16sp" />
 
             <RadioButton
@@ -112,28 +114,27 @@
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/radioButtonVerSaldo"
+                android:id="@+id/radioButtonSalir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ver Saldo"
+                android:text="Salir"
                 android:textSize="16sp" />
+
         </RadioGroup>
+
     </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/imageViewDolar"
-        android:layout_width="222dp"
-        android:layout_height="189dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="183dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonListo"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
         app:srcCompat="@drawable/dolar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
