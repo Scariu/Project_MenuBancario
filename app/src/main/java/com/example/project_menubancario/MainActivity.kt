@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         if(monto <= saldo){
             saldo -= monto
             limpiarMonto()
-            mostrarMensaje("No tiene saldo suficiente.")
-        }else{
             mostrarMensaje("Su saldo ha sido retirado correctamente.")
+        }else{
+            mostrarMensaje("No tiene saldo suficiente.")
         }
     }
 
