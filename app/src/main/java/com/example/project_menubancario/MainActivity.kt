@@ -27,15 +27,21 @@ class MainActivity : AppCompatActivity() {
         val monto = binding.editTextMonto.text.toString().toInt()
         if(monto <= saldo){
             saldo -= monto
+            limpiarMonto()
             mostrarMensaje("No tiene saldo suficiente.")
         }else{
             mostrarMensaje("Su saldo ha sido retirado correctamente.")
         }
     }
 
+    private fun limpiarMonto() {
+        binding.editTextMonto.text.clear()
+    }
+
 
     private fun ingresarSaldo() {
         saldo += binding.editTextMonto.text.toString().toInt()
+        limpiarMonto()
         mostrarMensaje("Su saldo ha sido ingresado correctamente.")
     }
 
