@@ -51,8 +51,8 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:text="Bienvenido a Awake Bank"
-            android:textSize="28sp"
-            tools:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
     </androidx.cardview.widget.CardView>
 
     <Button
